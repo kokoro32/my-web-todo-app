@@ -4,6 +4,7 @@ import Functions
 
 todos = Functions.get_todos()
 
+st.set_page_config(layout="wide")
 
 def add_todo():
     todo = st.session_state["new_todo"].strip()
@@ -18,7 +19,7 @@ def add_todo():
 
 st.title("My ToDo App")
 st.subheader("This is my todo App.")
-st.write("This App is to increase your productivity.")
+st.write("This App is to increase your <b>productivity.</b>", unsafe_allow_html=True)
 
 if st.button("¡Tareas completadas!"):
     # Crear una nueva lista solo con los todos no seleccionados
